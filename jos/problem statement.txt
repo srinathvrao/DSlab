@@ -1,0 +1,9 @@
+THE JOSEPHUS PROBLEM 
+There are n people standing in a circle waiting to 
+be executed. After the first man is executed, k - 1 people are skipped
+and the k-th man is executed. 
+Then  again, k-1 people are skipped and the  k-th  man  is executed.  
+The  elimination  proceeds  around  the  circle  (which  is becoming smaller and smaller 
+as the executed people are removed), until only the last man remains, who is given 
+freedom. The task is to choose the place in the initial circle so that you survive, 
+given n and k.
