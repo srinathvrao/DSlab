@@ -22,8 +22,11 @@ void Push(){
 		scanf("%d",&data);
 		if(ARRAY[0]==NULL)
 			ARRAY[0] = data;
-		else
-			ARRAY[n+1] = data;
+		else{
+			for(i=n;i>=0;i--)
+				ARRAY[i+1] = ARRAY[i];
+			ARRAY[0] = data;
+		}
 		n++;
 	}
 	else
@@ -34,8 +37,10 @@ void Pop(){
 	if(ARRAY[0] == NULL)
 		printf("\nCannot pop out of empty Stack.\n");
 	else{
-		printf("\nPopped %d\n",ARRAY[n]);
-		ARRAY[n--] = NULL;
+		printf("\nPopped %d\n", ARRAY[0]);
+		for(i=0;i<=n;i++)
+				ARRAY[i] = ARRAY[i+1];
+		n--;
 	}
 }
 
@@ -43,7 +48,7 @@ void Top(){
 	if(ARRAY[0] == NULL)
 		printf("\nStack is Empty.\n");
 	else
-		printf("\Top %d\n",ARRAY[n]);
+		printf("\Top %d\n",ARRAY[0]);
 }
 
 void IsFull(){
@@ -64,7 +69,7 @@ void Print(){
 	if(n==-1)
 		printf("\nStack is Empty\n");
 	else{
-		printf("\n");
+		printf("\nTop -> bottom\n");
 		for(i=0;ARRAY[i]!=NULL;i++)
 			printf("%d->",ARRAY[i]);
 		printf("\n");	
