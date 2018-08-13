@@ -40,7 +40,7 @@ void kill(){
 		xyz=1;
 		while(q!=NULL){
 			xyz++;
-			if(xyz == k+1) break;
+			if(xyz == k) break;
 			p = p->next;
 			q = q->next;
 		}

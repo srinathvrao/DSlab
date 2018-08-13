@@ -96,6 +96,7 @@ void Print(){
 	else{
 		p = (Node *)malloc(sizeof(Node));
 		p = START;
+		printf("\nBottom -> Top\n");
 		while(p!=NULL){
 			printf("%d->",p->data);
 			p = p->next;

@@ -70,7 +70,7 @@ void Print(){
 		printf("\nStack is Empty\n");
 	else{
 		printf("\nTop -> bottom\n");
-		for(i=0;ARRAY[i]!=NULL;i++)
+		for(i=0;ARRAY[i]!=NULL && i<=n;i++)
 			printf("%d->",ARRAY[i]);
 		printf("\n");	
 	}
