@@ -146,7 +146,7 @@ void Simplify(){
 	r = (struct node *) malloc(sizeof(struct node));
 	r = RESULTPROD;
 	int X, sumcoeff=0;
-	for(X=20;X>=0;X--){
+	for(X=1000;X>=0;X--){
 		sumcoeff = 0;
 		r = RESULTPROD;
 		while(r != NULL){
