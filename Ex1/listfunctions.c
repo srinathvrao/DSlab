@@ -4,7 +4,7 @@ void insertbeg(){
 	
 	int data,i=0;
 
-	if(n6==-1){
+	if(n==-1){
 
 		printf("\nEnter integer: ");
 		scanf("%d",&data);
@@ -93,20 +93,41 @@ void insertend(){
 }
 
 void elementat(){
-
+	int ch22;
+	printf("\nEnter index: ");
+	scanf("%d",&ch22);
+	if(ch22>n)
+		printf("\nInvalid Index\n");
+	else
+		printf("\n%d\n",ARR[ch22]);
 }
 
 void del(){
-	int data,i=0,pos;
+	int data,i=0,pos,ch22;
 
 	if(n==-1)
 		printf("\nList is empty. Cannot delete elements.\n");
 	else{
-		printf("\nEnter index of element to delete: ");
-		scanf("%d",&pos);
-		for(i=pos;i<=n;i++)
-			ARR[i] = ARR[i+1];
-		n--;
+		printf("\n1.Delete at beginning: \n2. Delete at position: \n3. Delete at end: \n");
+		scanf("%d",&ch22);
+		switch(ch22){
+			case 1:
+				for(i=0;i<=n;i++)
+					ARR[i] = ARR[i+1];
+				n--;
+				break;
+			case 2:
+				printf("\nEnter index of element to delete: ");
+				scanf("%d",&pos);
+				for(i=pos;i<=n;i++)
+					ARR[i] = ARR[i+1];
+				n--;
+					break;
+			case 3:
+				n--;
+				break;
+			default: printf("\nInvalid Choice\n");
+		}
 	}
 }
 
@@ -123,6 +144,8 @@ void findk(){
 				break;
 			}
 		}
+		if(ARR[i]!=data)
+			printf("\nElement not found\n");
 	}
 }
 
