@@ -11,8 +11,6 @@ int CreateTree(){
 		return 0;
 }
 
-hello world!
-
 int Insert(Node *xyz, int y){
 	if(xyz!=NULL){
 		if(y < xyz->data)
