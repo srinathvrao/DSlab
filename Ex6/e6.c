@@ -2,32 +2,17 @@
 
 int main(){
 	
-	
-	char s[10] = "{{{{}}}",c;
-	int i=0,a=0;
-	for(i=0;s[i]!='\0';i++){
-		if(s[i]=='{' || s[i]=='(' )	
-			Push(s[i]);
-		else{
-			if(s[i]=='}'){
-				if(Pop()!='{'){
-					a=-1;
-					printf("\nExpression is not balanced\n");
-					break;
-				}
-			}
-			else if(s[i]==')'){
-				if(Pop()!='('){
-					a=-1;
-					printf("\nExpression is not balanced\n");
-					break;
-				}
-			}
+	int ch=-1;
+	while(ch!=0){
+		printf("\n---------\n1. Balance expression\n2. Evaluate Postfix\n3. infix to postfix\n0. Exit\nchoice: ");
+		scanf("%d",&ch);
+		switch(ch){
+			case 1: bal();break;
+			case 2: postf();break;
+			case 3: inftopost();break;
+			case 0: break;
 		}
 	}
-	
-	if(TOP!=NULL && a==0)
-		printf("\nExpression is not balanced\n");
 	
 	return 0;
 }
