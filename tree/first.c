@@ -1,7 +1,7 @@
 #include "func.c"
 
 int main(){
-	int no;
+	int no, choice =-1;
 	while(choice!=0){
 		printf("\n--------\n1. CreateTree\n2. Insert\n3. IsEmpty\n4. Size\n5. CountLeaf\n6. Height\n7. LOTraverse\n8. PreTraverse\n9. POsTraverse\n10. INOTraverse\n0. Exit\nchoice: ");
 		scanf("%d",&choice);

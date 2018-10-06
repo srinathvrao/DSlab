@@ -7,7 +7,6 @@ struct node{
 } *root;
 
 typedef struct node Node;
-int choice = -1;
 Node *p, *q, *xyz;
 int CreateTree();
 int Insert(Node *,int);
